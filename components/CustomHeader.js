@@ -2,8 +2,18 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function CustomHeader() {
+    const navigation = useNavigation();
+
+    const handleChatPress = () => {
+        navigation.navigate('Chat');
+    };
+
+    const handleNotificationsPress = () => {
+        navigation.navigate('Notifications');
+    };
     return (
         <View style={styles.headerContainer}>
             <TouchableOpacity>
@@ -15,10 +25,10 @@ export default function CustomHeader() {
                 placeholderTextColor="#999"
             />
             <View style={styles.iconsContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleChatPress}>
                     <Ionicons name="chatbubbles-outline" size={24} color="black" />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.iconSpacing}>
+                <TouchableOpacity onPress={handleNotificationsPress}>
                     <Ionicons name="notifications-outline" size={24} color="black" />
                 </TouchableOpacity>
             </View>
