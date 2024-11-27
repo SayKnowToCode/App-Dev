@@ -1,3 +1,5 @@
+// import './globals.css';
+
 import React from 'react';
 import { StatusBar, SafeAreaView, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';

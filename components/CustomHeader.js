@@ -3,6 +3,7 @@ import React from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import Drawer from './Drawer';
 
 export default function CustomHeader() {
     const navigation = useNavigation();
@@ -16,6 +17,7 @@ export default function CustomHeader() {
     };
     return (
         <View style={styles.headerContainer}>
+            {/* <Drawer /> */}
             <TouchableOpacity>
                 <Ionicons name="person-circle-outline" size={30} color="black" />
             </TouchableOpacity>
