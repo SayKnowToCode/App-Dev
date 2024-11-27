@@ -2,6 +2,17 @@
   "expo": {
     "name": "Basic",
     "slug": "Basic",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "android": {
+      "permissions": [
+        "READ_CONTACTS",
+        "WRITE_CONTACTS"
+      ]
+    },
+    "ios": {
+      "infoPlist": {
+        "NSContactsUsageDescription": "This app requires access to your contacts to display them."
+      }
+    }
   }
 }
